@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "ml-system-design-itmo"
+version = "0.1.0"
+description = ""
+authors = ["Konstantin.Grotov <konstantin.grotov@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+
+
+[tool.poetry.group.dev.dependencies]
+pre-commit = "^4.0.1"
+ruff = "^0.8.0"
+isort = "^5.13.2"
+mypy = "^1.13.0"
+pylint = "^3.3.1"
+pytest = "^8.3.3"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
