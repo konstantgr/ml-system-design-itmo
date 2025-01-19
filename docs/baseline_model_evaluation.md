@@ -89,21 +89,3 @@ The baseline model using resume text shows similar overfitting issues as the pre
 2. Worse test set performance (MSE: 2.2054, R2: -0.1170)
 3. The negative R2 score on the test set indicates the model performs worse than a horizontal line
 4. The model still fails to meet the custom accuracy requirements on the test set
-
-## Recommendations for Improvement
-
-1. **Modern LLM Integration**
-   - Replace BERT with state-of-the-art LLMs (e.g., GPT-4, Claude, or Gemini)
-   - Utilize LLMs' reasoning capabilities for direct relevance scoring
-   - Leverage few-shot learning with example job-candidate matches
-
-2. **Prompt Engineering**
-   - Design structured prompts that ask LLM to evaluate specific aspects of the match
-   - Include rubric-based evaluation in the prompt
-   - Use chain-of-thought prompting for transparent scoring decisions
-
-3. **Hybrid Approach**
-   - Combine LLM reasoning with structured scoring outputs
-   - Implement temperature control for consistent evaluations
-   - Use system prompts to enforce evaluation standards
-
