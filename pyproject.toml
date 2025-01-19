@@ -33,6 +33,8 @@ isort = "^5.13.2"
 mypy = "^1.13.0"
 ipykernel = "^6.29.5"
 pytest = "^8.3.4"
+responses = "^0.25.6"
+locust = "^2.32.6"
 
 
 [tool.poetry.group.web.dependencies]
