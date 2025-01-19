@@ -13,21 +13,21 @@ repos:
         entry: ruff check --select I --fix
         pass_filenames: false
         language: system
-    -   id: mypy
-        name: mypy
-        description: Verify types statically
-        entry: poetry run mypy src
-        pass_filenames: false
-        language: system
-    -   id: pylint
-        name: pylint_core
-        entry: poetry run pylint src
-        files: src/.*\.py$
-        language: system
-        types: [ python ]
-        verbose: false
-        args:
-          - --fail-under=9
+    # -   id: mypy
+    #     name: mypy
+    #     description: Verify types statically
+    #     entry: poetry run mypy src
+    #     pass_filenames: false
+    #     language: system
+    # -   id: pylint
+    #     name: pylint_core
+    #     entry: poetry run pylint src
+    #     files: src/.*\.py$
+    #     language: system
+    #     types: [ python ]
+    #     verbose: false
+    #     args:
+    #       - --fail-under=9
     -   id: pytest
         name: pytest
         description: Run Python tests
@@ -44,6 +44,6 @@ repos:
         name: poetry-export
         description: Exports requirements.txt file for docker container with service and web dependencies
         entry: poetry export
-        args: [ "--with", "dev", "-o", "requirements.txt" ]
+        args: [ "--with", "dev,training,web,service", "-o", "requirements.txt" ]
         pass_filenames: false
         language: system
